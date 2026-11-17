@@ -6,7 +6,7 @@ The notebook models quarterly growth in **real gross private domestic investment
 
 ## Data
 
-The notebook reads `merged_quarterly_data.csv`, which is **not included in this repository**. It is a quarterly file with these columns (all from FRED):
+The notebook is a quarterly file with these columns (all from FRED):
 
 | Column | Series |
 |---|---|
@@ -20,22 +20,10 @@ The notebook reads `merged_quarterly_data.csv`, which is **not included in this 
 
 The dataset has 254 quarterly observations (253 after differencing).
 
-Section K5 also downloads newer BEA data (NIPA Table 1.1.6) from the [DBnomics API](https://db.nomics.world/), so it needs an internet connection.
-
-## Setup
-
-The notebook was written for **Google Colab**, but runs in any Jupyter environment with Python 3.
 
 ```bash
 pip install pandas numpy matplotlib seaborn scipy statsmodels scikit-learn
 ```
-
-Before running it:
-
-1. Put `merged_quarterly_data.csv` somewhere reachable and update the path in cell 2 (`url = "/merged_quarterly_data.csv"`).
-2. If you are not on Colab, delete or comment out `from google.colab import drive` in the first cell.
-
-Then run all cells in order. A few cells save plots to the working directory (`eda_pairplot_updated.png`, `qqplot_updated.png`).
 
 ## What the notebook does
 
